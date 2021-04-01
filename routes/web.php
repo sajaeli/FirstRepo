@@ -16,3 +16,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('about',function() {
+    $name ="Saja Elian";
+    return view('about', compact('name'));
+});
+Route::post('send',function(HttpRequest $request){
+    $name= $request->myname;
+    return view('about', compact('name'));
+});
