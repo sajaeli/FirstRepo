@@ -8,10 +8,10 @@
 </head>
 <body>
   <h1>Hello my name is {{$name}} </h1>
-  <form actoin="send" method-"post">
+  <form actoin="send" method="POST">
   @csrf 
-  <input type="text" name="myname" id-"myname">
-  <input type-"submit" value="send">
-  </form>
+  <input type="text" name="myname" id="myname">
+  <input type="submit" value="send">
+  <from>
 </body>
 </html>

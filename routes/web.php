@@ -17,7 +17,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('about',function() {
-    $name ="Saja Elian";
+    $name ='Saja Elian';
     return view('about', compact('name'));
 });
 Route::post('send',function(HttpRequest $request){
