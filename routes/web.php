@@ -16,11 +16,21 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('about',function() {
-    $name ='Saja Elian';
-    return view('about', compact('name'));
+Rout::get('tasks',function(){
+    $tasks= [
+    'Task 1',
+    'Task 2',
+    'Task 3',
+    ];
+    return view('tasks',compact('task'));
 });
-Route::post('send',function(HttpRequest $request){
-    $name= $request->myname;
-    return view('about', compact('name'));
+Rout::get('show/{id}',function($id){
+    $tasks = [
+        'first-task' => 'Task 1',
+        'second-task' => 'Task 2',
+        'Third-task' => 'Task 3',
+    ];
+    $task = $task[$id] ;
+    return view('show',compact('task'));
 });
+
